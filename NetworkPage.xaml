@@ -1,0 +1,105 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="health_app.NetworkPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" >
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Background="Blue" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" TextAlignment="Center" Text="Network" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Microsoft MHei" />
+        </StackPanel>
+
+        <StackPanel x:Name="Footer"
+                    Height="100"
+                    Margin="9,495,0,4" 
+                    Background="Blue" 
+                    Grid.Row="1" />
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Button 
+                Height="150" 
+                HorizontalAlignment="Left" 
+                Margin="-20,489,0,0" 
+                Name="toEvent1" 
+                VerticalAlignment="Top" 
+                Width="150"
+                Background="Transparent"
+                Click="back_Click" BorderThickness="0">
+                <Image Source="appbar.back.rest.png"/>
+            </Button>
+            <Button 
+                Height="150" 
+                HorizontalAlignment="Left" 
+                Margin="151,490,0,0" 
+                Name="toEvent2" 
+                VerticalAlignment="Top" 
+                Width="150"
+                Background="Transparent"
+                Click="discover_Click" BorderThickness="0">
+                <Image Source="appbar.add.rest.png" />
+            </Button>
+            <Button 
+                Height="150" 
+                HorizontalAlignment="Left" 
+                Margin="327,489,0,0" 
+                Name="toEvent" 
+                VerticalAlignment="Top" 
+                Width="150" 
+                Background="Transparent" 
+                Click="discover_Click" 
+                BorderThickness="0" >
+                <Image Source="appbar.feature.search.rest.png" />
+            </Button>
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="appbar.favs.addto.rest.png" Text="Search"/>
+            <shell:ApplicationBarIconButton IconUri="appbar.feature.search.rest.png" Text="Discover"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Search"/>
+                <shell:ApplicationBarMenuItem Text="Discover"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

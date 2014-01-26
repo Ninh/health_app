@@ -1,0 +1,113 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="health_app.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" >
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Background="Blue" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" TextAlignment="Center" Text="Edit Profile" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Microsoft MHei" />
+        </StackPanel>
+
+        <StackPanel x:Name="Footer"
+                    Height="100"
+                    Margin="9,495,0,4" 
+                    Background="Blue" 
+                    Grid.Row="1" />
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Button 
+                Height="150" 
+                HorizontalAlignment="Left" 
+                Margin="340,488,0,0" 
+                Name="saveButton" 
+                VerticalAlignment="Top" 
+                Width="150"
+                Background="Transparent"
+                BorderThickness="0"
+                Click="save_Click">
+                <Image Source="appbar.save.rest.png" />
+            </Button>
+            <Button 
+                Height="150" 
+                HorizontalAlignment="Left" 
+                Margin="-22,488,0,0" 
+                Name="backButton" 
+                VerticalAlignment="Top" 
+                Width="150"
+                BorderThickness="0"
+                Background="Transparent"
+                Click="back_Click">
+                <Image Source="appbar.back.rest.png"/>
+            </Button>
+            <TextBox
+                    x:Name="allergies" Text=""
+                    Height="70"
+                    FontFamily="{StaticResource PhoneFontFamilyLight}"                    
+                    MaxLength="30" Margin="201,304,6,260" FontSize="28" />
+            <TextBox
+                    x:Name="name" Text=""
+                    Height="70"
+                    FontFamily="{StaticResource PhoneFontFamilyLight}"                    
+                    MaxLength="30" Margin="201,6,6,558" FontSize="28" />
+            <TextBox
+                    x:Name="ethnicity" Text=""
+                    Height="70"
+                    FontFamily="{StaticResource PhoneFontFamilyLight}"                    
+                    MaxLength="30" Margin="203,366,4,198" TextChanged="ethnicity_TextChanged" FontSize="28" />
+            <TextBlock FontSize="36" Height="48" HorizontalAlignment="Left" Margin="34,18,0,0" Name="nameBox" Text="Name" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,80,0,0" Name="ageBox" Text="Age (years)" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,130,0,0" Name="sexBox" Text="Sex" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,182,0,0" Name="heightBox" Text="Height (ft'in'')" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,262,0,0" Name="weightBox" Text="Weight (in lbs.)" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,322,0,0" Name="allergiesBox" Text="Allergies" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,384,0,0" Name="ethBox" Text="Ethnicitiy" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,446,0,0" Name="bloodBox" Text="Blood (i.e. O+)" VerticalAlignment="Top" />
+            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,64,86,500" MaxLength="30" Name="age" Text="" FontSize="28" />
+            <RadioButton Content="F" Height="70" HorizontalAlignment="Left" Margin="234,118,0,0" Name="F" VerticalAlignment="Top" FontSize="28" />
+            <RadioButton Content="M" Height="70" HorizontalAlignment="Left" Margin="320,118,0,0" Name="M" VerticalAlignment="Top" FontSize="28" />
+            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,176,86,388" MaxLength="30" Name="height" Text="" FontSize="28" />
+            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,242,86,322" MaxLength="30" Name="weight" Text="" FontSize="28" />
+            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,424,86,140" MaxLength="30" Name="blood" Text="" FontSize="28" />
+        </Grid>
+    </Grid>
+ 
+</phone:PhoneApplicationPage>
