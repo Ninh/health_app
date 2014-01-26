@@ -24,8 +24,7 @@ namespace health_app
         {
             base.OnNavigatedTo(e);
 
-            string alg, _age, _sex, h, w, nm, eth, bld, qry;
-            alg = _age = _sex = h = w = nm = eth = bld = qry = string.Empty;
+            string qry = string.Empty;
 
             if (NavigationContext.QueryString.TryGetValue("qry", out qry))
             {
@@ -56,23 +55,6 @@ namespace health_app
                 if (String.Compare(parameters[7].Trim(), "") != 0 && parameters[7] != null)
                     blood.Text = parameters[7];
             }
-
-            //if (NavigationContext.QueryString.TryGetValue("alg", out alg) && alg != string.Empty)
-            //    allergies.Text = alg;
-            //if (NavigationContext.QueryString.TryGetValue("nm", out nm) && nm != string.Empty)
-            //    name.Text = nm;
-            //if (NavigationContext.QueryString.TryGetValue("age", out _age) && _age != string.Empty)
-            //    age.Text = _age;
-            //if (NavigationContext.QueryString.TryGetValue("sex", out _sex) && _sex != string.Empty)
-            //    sex.Text = _sex;
-            //if (NavigationContext.QueryString.TryGetValue("h", out h) && h != string.Empty)
-            //    height.Text = h;
-            //if (NavigationContext.QueryString.TryGetValue("w", out w) && w != string.Empty)
-            //    weight.Text = w;
-            //if (NavigationContext.QueryString.TryGetValue("eth", out eth) && alg != string.Empty)
-            //    ethnicity.Text = eth;
-            //if (NavigationContext.QueryString.TryGetValue("bld", out bld) && bld != string.Empty)
-            //    blood.Text = bld;
         }
 
         private void toEdit_Click(object sender, RoutedEventArgs e)

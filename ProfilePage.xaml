@@ -92,7 +92,7 @@
                     x:Name="ethnicity" Text=""
                     Height="70"
                     FontFamily="{StaticResource PhoneFontFamilyLight}"                    
-                    MaxLength="30" Margin="203,366,4,198" TextChanged="ethnicity_TextChanged" FontSize="28" />
+                    MaxLength="30" Margin="203,366,4,198" FontSize="28" />
             <TextBlock FontSize="36" Height="48" HorizontalAlignment="Left" Margin="34,18,0,0" Name="nameBox" Text="Name" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,80,0,0" Name="ageBox" Text="Age (years)" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,130,0,0" Name="sexBox" Text="Sex" VerticalAlignment="Top" />

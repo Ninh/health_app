@@ -66,6 +66,15 @@ namespace health_app
                     db.CreateDatabase();
                 }
             }
+
+            using (UserDataContext db = new UserDataContext(UserDataContext.DBConnectionString))
+            {
+                if (db.DatabaseExists() == false)
+                {
+                    //Create the database
+                    db.CreateDatabase();
+                }
+            }
         }
 
         // Code to execute when the application is launching (eg, from Start)
