@@ -22,24 +22,24 @@ namespace health_app
 
         private void save_Click(object sender, RoutedEventArgs e)
         {
-            //if (this.NavigationService.CanGoBack)
-            //{
+            if (this.NavigationService.CanGoBack)
+            {
                 string sex = string.Empty;
-                //if (M.IsChecked == null)
-                //    sex = "F";
-                //else if (F.IsChecked == null)
+                if (F.IsChecked.Value)
+                    sex = "F";
+                else if (M.IsChecked.Value)
                     sex = "M";
                 NavigationService.Navigate(new Uri(
-                    "/MainPage.xaml?nm=" + 
-                    name.Text + "&amp;age=" + 
-                    age.Text + "&amp;sex=" +
-                    sex + "&amp;h=" +
-                    height.Text + "&amp;w=" +
-                    weight.Text + "&amp;alg=" +
-                    allergies.Text + "&amp;eth=" +
-                    ethnicity.Text + "&amp;bld=" +
-                    blood.Text, UriKind.Relative));
-            //}
+                    "/MainPage.xaml?qry=" + 
+                    name.Text + "|" + 
+                    age.Text + "|" +
+                    sex + "|" +
+                    height.Text + "|" +
+                    weight.Text + "|" +
+                    allergies.Text + "|" +
+                    ethnicity.Text + "|" + blood.Text,
+                    UriKind.Relative));   
+            }
         }
 
         private void back_Click(object sender, RoutedEventArgs e)

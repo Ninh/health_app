@@ -99,14 +99,14 @@
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,182,0,0" Name="heightBox" Text="Height (ft'in'')" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,262,0,0" Name="weightBox" Text="Weight (in lbs.)" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,322,0,0" Name="allergiesBox" Text="Allergies" VerticalAlignment="Top" />
-            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,384,0,0" Name="ethBox" Text="Ethnicitiy" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,384,0,0" Name="ethBox" Text="Ethnicity" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="34,446,0,0" Name="bloodBox" Text="Blood (i.e. O+)" VerticalAlignment="Top" />
-            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,64,86,500" MaxLength="30" Name="age" Text="" FontSize="28" />
-            <RadioButton Content="F" Height="70" HorizontalAlignment="Left" Margin="234,118,0,0" Name="F" VerticalAlignment="Top" FontSize="28" />
-            <RadioButton Content="M" Height="70" HorizontalAlignment="Left" Margin="320,118,0,0" Name="M" VerticalAlignment="Top" FontSize="28" />
-            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,176,86,388" MaxLength="30" Name="height" Text="" FontSize="28" />
-            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,242,86,322" MaxLength="30" Name="weight" Text="" FontSize="28" />
-            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,424,86,140" MaxLength="30" Name="blood" Text="" FontSize="28" />
+            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,64,86,500" MaxLength="3" Name="age" Text="" FontSize="28" />
+            <RadioButton Content="F" Height="70" HorizontalAlignment="Left" Margin="234,118,0,0" Name="F" VerticalAlignment="Top" FontSize="28" x:FieldModifier="public"/>
+            <RadioButton Content="M" Height="70" HorizontalAlignment="Left" Margin="320,118,0,0" Name="M" VerticalAlignment="Top" FontSize="28" x:FieldModifier="public"/>
+            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,176,86,388" MaxLength="6" Name="height" Text="" FontSize="28" />
+            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,242,86,322" MaxLength="3" Name="weight" Text="" FontSize="28" />
+            <TextBox FontFamily="{StaticResource PhoneFontFamilyLight}" Height="70" Margin="263,424,86,140" MaxLength="2" Name="blood" Text="" FontSize="28" />
         </Grid>
     </Grid>
  

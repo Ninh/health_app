@@ -105,64 +105,64 @@
                 HorizontalAlignment="Left" 
                 Margin="215,20,0,0" 
                 Name="name" 
-                Text="None." 
+                Text="None" 
                 VerticalAlignment="Top" FontSize="36" />
             <TextBlock 
                 Height="40" 
                 HorizontalAlignment="Left" 
                 Margin="215,96,0,0" 
                 Name="age" 
-                Text="None." 
+                Text="None" 
                 VerticalAlignment="Top" FontSize="28" />
             <TextBlock 
                 Height="40" 
                 HorizontalAlignment="Left" 
                 Margin="215,145,0,0" 
                 Name="sex" 
-                Text="None." 
+                Text="None" 
                 VerticalAlignment="Top" FontSize="28" />
             <TextBlock 
                 Height="40" 
                 HorizontalAlignment="Left" 
-                Margin="215,192,0,0" 
+                Margin="215,195,0,0" 
                 Name="height" 
-                Text="None." 
+                Text="None" 
                 VerticalAlignment="Top" FontSize="28" />
             <TextBlock 
                 Height="40" 
                 HorizontalAlignment="Left" 
                 Margin="215,250,0,0" 
                 Name="weight" 
-                Text="None." 
+                Text="None" 
                 VerticalAlignment="Top" FontSize="28" />
             <TextBlock 
                 Height="40" 
                 HorizontalAlignment="Left" 
                 Margin="215,297,0,0" 
                 Name="allergies" 
-                Text="None." 
+                Text="None" 
                 VerticalAlignment="Top" FontSize="28" />
             <TextBlock 
                 Height="40" 
                 HorizontalAlignment="Left" 
                 Margin="215,347,0,0" 
                 Name="ethnicity" 
-                Text="None." 
+                Text="None" 
                 VerticalAlignment="Top" FontSize="28" />
             <TextBlock 
                 Height="40" 
                 HorizontalAlignment="Left" 
                 Margin="215,397,0,0" 
                 Name="blood" 
-                Text="None." 
+                Text="None" 
                 VerticalAlignment="Top" FontSize="28" />
             <TextBlock FontSize="36" Height="48" HorizontalAlignment="Left" Margin="44,20,0,0" Name="nameBox" Text="Name" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="44,96,0,0" Name="ageBox" Text="Age" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="44,145,0,0" Name="sexBox" Text="Sex" VerticalAlignment="Top" />
-            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="44,192,0,0" Name="heightBox" Text="Height" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="44,195,0,0" Name="heightBox" Text="Height" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="44,250,0,0" Name="weightBox" Text="Weight" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="44,297,0,0" Name="allergiesBox" Text="Allergies" VerticalAlignment="Top" />
-            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="44,347,0,0" Name="ethBox" Text="Ethnicitiy" VerticalAlignment="Top" />
+            <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="44,347,0,0" Name="ethBox" Text="Ethnicity" VerticalAlignment="Top" />
             <TextBlock FontSize="28" Height="40" HorizontalAlignment="Left" Margin="44,397,0,0" Name="bloodBox" Text="Blood Type" VerticalAlignment="Top" />
         </Grid>
     </Grid>
