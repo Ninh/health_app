@@ -53,6 +53,19 @@ namespace health_app
             this.DataContext = this;
         }
 
+        private void discuss_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/DiscussPage.xaml", UriKind.Relative));
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
+
         private void deleteTaskButton_Click(object sender, RoutedEventArgs e)
         {
             // Cast parameter as a button.

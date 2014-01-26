@@ -46,6 +46,12 @@
             <TextBlock x:Name="PageTitle" TextAlignment="Center" Text="Medical Events" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Microsoft MHei" FontSize="70" />
         </StackPanel>
 
+        <StackPanel x:Name="Footer"
+                    Height="100"
+                    Margin="9,495,0,4" 
+                    Background="Blue" 
+                    Grid.Row="1" />
+
         <!--ContentPanel - place additional content here.-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Grid.RowDefinitions>
@@ -69,6 +75,14 @@
                                 IsChecked="{Binding IsComplete, Mode=TwoWay}"
                                 Grid.Column="0"
                                 VerticalAlignment="Center"/>-->
+                            <Button
+                                Grid.Column="0"
+                                x:Name="discussButton"
+                                BorderThickness="0"                                
+                                Margin="0"
+                                Click="discuss_Click">
+                                <Image Source="appbar.feature.email.rest.png"/>
+                            </Button>
                             <TextBlock
                                 Text="{Binding ItemName}"
                                 FontSize="{StaticResource PhoneFontSizeLarge}"

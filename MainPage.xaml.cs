@@ -30,14 +30,7 @@ namespace health_app
             {
                 string[] fields = { "name.Text", "age.Text", "sex.Text", "height.Text", "weight.Text", "allergies.Text", "ethnicity.Text", "blood.Text" };
                 string[] parameters = qry.Split(new char[] { '|' });
-                //name.Text = parameters[0];
-                //for(int i = 0; i < 8; i++)
-                //{
-                //    if (parameters[i] == null)
-                //        continue;
-                //    else
-                //        fields[i] = parameters[i];
-                //}
+
                 if (String.Compare(parameters[0].Trim(),"") != 0 && parameters[0] != null)
                     name.Text = parameters[0];
                 if (String.Compare(parameters[1].Trim(), "") != 0 && parameters[1] != null)

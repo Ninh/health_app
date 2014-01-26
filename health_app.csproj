@@ -125,6 +125,9 @@
     <Content Include="appbar.favs.rest.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="appbar.feature.email.rest.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="appbar.feature.search.rest.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
